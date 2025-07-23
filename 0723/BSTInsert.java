@@ -8,8 +8,6 @@ public class BSTInsert {
             this.data = data;
         }
     }
-    
-    // 插入節點
     public static TreeNode insert(TreeNode root, int data) {
         if (root == null) {
             return new TreeNode(data);
@@ -23,8 +21,7 @@ public class BSTInsert {
         
         return root;
     }
-    
-    // 中序遍歷（會得到排序結果）
+
     public static void inOrder(TreeNode root) {
         if (root != null) {
             inOrder(root.left);
@@ -35,8 +32,7 @@ public class BSTInsert {
     
     public static void main(String[] args) {
         TreeNode root = null;
-        
-        // 插入數據
+
         int[] values = {50, 30, 70, 20, 40, 60, 80};
         
         for (int value : values) {

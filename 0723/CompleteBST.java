@@ -114,8 +114,7 @@ public class CompleteBST {
     
     public static void main(String[] args) {
         BST bst = new BST();
-        
-        // 插入測試數據
+
         int[] values = {50, 30, 70, 20, 40, 60, 80, 10, 25, 35, 45};
         System.out.println("插入數據: " + Arrays.toString(values));
         
@@ -130,12 +129,10 @@ public class CompleteBST {
         bst.levelOrder();
         
         System.out.println("樹的高度: " + bst.height());
-        
-        // 搜尋測試
+
         System.out.println("搜尋 35: " + bst.search(35));
         System.out.println("搜尋 55: " + bst.search(55));
-        
-        // 刪除測試
+
         bst.delete(20);
         System.out.print("刪除 20 後: ");
         bst.inOrder();

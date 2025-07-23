@@ -1,10 +1,6 @@
 public class ArrayStatistics {
-
-    public static void main(String[] args) {
-        // 1. 建立陣列
+ public static void main(String[] args) {
         int[] data = {5, 12, 8, 15, 7, 23, 18, 9, 14, 6};
-
-        // 2. 統計分析
         int sum = 0;
         double average;
         int max = data[0], min = data[0];
@@ -12,7 +8,6 @@ public class ArrayStatistics {
         int aboveAverageCount = 0;
         int evenCount = 0, oddCount = 0;
 
-        // 總和、最大/最小值、偶奇數統計
         for (int i = 0; i < data.length; i++) {
             int num = data[i];
             sum += num;
@@ -33,17 +28,14 @@ public class ArrayStatistics {
             }
         }
 
-        // 平均值
+        
         average = (double) sum / data.length;
-
-        // 大於平均的數量
         for (int num : data) {
             if (num > average) {
                 aboveAverageCount++;
             }
         }
 
-        // 3. 表格形式輸出
         System.out.println("=== 陣列統計分析結果 ===");
         System.out.printf("%-20s: %d%n", "總和", sum);
         System.out.printf("%-20s: %.2f%n", "平均值", average);

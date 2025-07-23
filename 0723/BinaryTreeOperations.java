@@ -8,20 +8,17 @@ public class BinaryTreeOperations {
             this.data = data;
         }
     }
-    
-    // 計算樹的高度
+
     public static int height(TreeNode node) {
         if (node == null) return 0;
         return 1 + Math.max(height(node.left), height(node.right));
     }
-    
-    // 計算節點數量
+
     public static int countNodes(TreeNode node) {
         if (node == null) return 0;
         return 1 + countNodes(node.left) + countNodes(node.right);
     }
-    
-    // 計算葉節點數量
+
     public static int countLeaves(TreeNode node) {
         if (node == null) return 0;
         if (node.left == null && node.right == null) return 1;
@@ -29,7 +26,6 @@ public class BinaryTreeOperations {
     }
     
     public static void main(String[] args) {
-        // 建立測試樹
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
